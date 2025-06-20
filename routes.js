@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { getVotes } = require("./controllers");
+const { getVotes, addVote } = require("./controllers");
 
 /*router.post("/votes", (req, res) => {
   const { subject } = req.body;
@@ -11,5 +11,6 @@ const { getVotes } = require("./controllers");
 });*/
 
 router.get("/votes", getVotes);
+router.post("/votes", addVote);
 
 module.exports = router;

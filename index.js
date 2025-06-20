@@ -1,6 +1,5 @@
 const express = require("express");
 const cors = require("cors");
-const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const userRouter = require("./routes");
 
@@ -13,7 +12,7 @@ mongoose
   .catch(console.error);
 
 app.use(cors({ origin: "*" }));
-
+app.use(express.json());
 app.use("/", userRouter);
 
 app.listen(PORT, () => {
