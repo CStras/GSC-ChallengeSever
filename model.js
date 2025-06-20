@@ -8,4 +8,4 @@ const voteSchema = new mongoose.Schema({
   value: { type: Number, required: true, default: 1 },
 });
 
-module.exports = mongoose.model("vote", voteSchema);
+module.exports = mongoose.model("vote", voteSchema, "votes");
